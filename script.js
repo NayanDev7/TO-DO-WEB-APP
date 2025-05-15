@@ -17,6 +17,31 @@ function addToList(){
     if(text){
     const listItem = document.createElement("li");
     listItem.className = "task-item";
+
+    const checkBox = document.createElement("button");
+    checkBox.className = "btn-check";
+
+    const span = document.createElement("span");
+    span.className = "text";
+    span.textContent = text;
+
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "btn-close";
+    closeBtn.textContent = "❌";
+
+    listItem.appendChild(checkBox);
+    listItem.appendChild(span);
+    listItem.appendChild(closeBtn);
+
+    taskList.appendChild(listItem);
+
+    newTask.value = "";
+
+    closeBtn.addEventListener("click",function(){
+        taskList.removeChild(listItem)
+    })
+
     
+
 }
 };
