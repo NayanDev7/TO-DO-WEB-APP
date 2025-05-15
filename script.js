@@ -41,7 +41,9 @@ function addToList(){
         taskList.removeChild(listItem)
     })
 
-    
+    checkBox.addEventListener("click",function(){
+        listItem.classList.toggle("active")
+    })
 
 }
 };

@@ -51,10 +51,12 @@ body {
     background-color: #d4dee2;
     padding-left: 15px;
     border-radius: 100px;
-    &:hover{
+
+    &:hover {
         outline: none;
     }
-    &:focus{
+
+    &:focus {
         outline: none;
     }
 }
@@ -68,21 +70,23 @@ body {
     border: none;
     background-color: rgb(255, 65, 65);
     color: #fff;
-    &:hover{
-        background-color: rgba(255, 65, 65,0.8  );
+
+    &:hover {
+        background-color: rgba(255, 65, 65, 0.8);
     }
+
     transition: all 0.3s ease-in-out;
 }
 
-#task-list{
+#task-list {
     display: flex;
     flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
-} 
+}
 
-.task-item{
+.task-item {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -96,33 +100,43 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: #111;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
+    }
+    .active & {
+        text-decoration: line-through;
     }
 }
 
-.btn-check{
+.btn-check {
     cursor: pointer;
     position: absolute;
     padding: 10px;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 100px;
     background-color: rgba(235, 229, 229, 0.745);
-    &:hover{
-        background-color: rgba(0,0,0,0.2);
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
     }
     transition: all 0.5s ease-in-out;
+    .active & {
+        background-color: #0aa317;
+    }
 }
 
-.btn-close{
+.btn-close {
     border: none;
     background-color: transparent;
     height: 30px;
     width: 30px;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: rgba(0, 0, 0, 0.2);
     }
+
     transition: all 0.5s ease-in-out;
     border-radius: 100px;
 }
